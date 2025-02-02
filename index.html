@@ -535,11 +535,13 @@ function showSection(sectionId) {
     .image-container img {
         width: 50%;
         opacity: 0; /* Fillimisht imazhet janë të padukshme */
-        transition: opacity 1s ease-in-out; /* Shton animacion për ndryshimin e opacitetit */
+        transform: translateY(20px); /* Shton një zhvendosje vertikale */
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Shton animacion për ndryshimin e opacitetit dhe zhvendosjes */
     }
 
     .image-container img.visible {
         opacity: 1; /* Bëhet i dukshëm kur klasa 'visible' shtohet */
+        transform: translateY(0); /* Kthen zhvendosjen në zero */
     }
 </style>
 
@@ -558,11 +560,11 @@ function showSection(sectionId) {
 <div id="certification" class="content certification">
     <h1 style="color: white; text-align: center;">GALLERY</h1>
     <div class="image-container">
-        <img src="painting1.jpg" alt="painting1.jpg" style="width: 50%;">
+        <img src="painting1.jpg" alt="painting1.jpg">
         <p>Vaj në pëlhurë 1.5m X 2</p>
-        <img src="painting2.jpg" alt="painting2.jpg" style="width: 50%;">
+        <img src="painting2.jpg" alt="painting2.jpg">
         <p>Vaj në pëlhurë 1.5m X 2</p>
-        <img src="painting3.jpg" alt="painting3.jpg" style="width: 50%;">
+        <img src="painting3.jpg" alt="painting3.jpg">
         <p>Vaj në pëlhurë 1.5m X 2</p>
     </div>
 </div>
