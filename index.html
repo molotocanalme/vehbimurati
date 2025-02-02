@@ -292,13 +292,17 @@
     #bio-section {
         text-align: right;
     }
-       .animated-image {
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      .animated-image {
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
+    position: relative;
+    z-index: 1;
 }
 
 .animated-image:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    filter: brightness(1.2) contrast(1.2);
+    z-index: 2;
 }
 
 @keyframes fadeIn {
@@ -312,6 +316,27 @@
 
 .animated-image {
     animation: fadeIn 1s ease-in-out;
+}
+
+.image-container {
+    perspective: 1000px;
+}
+
+.animated-image {
+    transform-style: preserve-3d;
+}
+
+.animated-image:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    z-index: -1;
 }
 </style>
 </head>
@@ -558,11 +583,11 @@ function showSection(sectionId) {
 <div id="certification" class="content certification">
     <h1 style="color: white; text-align: center;">GALLERY</h1>
     <div class="image-container">
-        <img src="painting1.jpg" alt="painting1.jpg" class="animated-image" style="width: 80%;">
+        <img src="painting1.jpg" alt="painting1.jpg" class="animated-image" style="width: 70%;">
         <p>Vaj në pëlhurë 1.5m X 2</p>
-        <img src="painting2.jpg" alt="painting2.jpg" class="animated-image" style="width: 80%;">
+        <img src="painting2.jpg" alt="painting2.jpg" class="animated-image" style="width: 70%;">
         <p>Vaj në pëlhurë 1.5m X 2</p>
-        <img src="painting3.jpg" alt="painting3.jpg" class="animated-image" style="width: 80%;">
+        <img src="painting3.jpg" alt="painting3.jpg" class="animated-image" style="width: 70%;">
         <p>Vaj në pëlhurë 1.5m X 2</p>
     </div>
 </div>
