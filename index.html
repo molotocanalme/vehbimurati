@@ -292,13 +292,14 @@
     #bio-section {
         text-align: right;
     }
-        .animated-image {
-    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+       .animated-image {
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
 
 .animated-image:hover {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    filter: brightness(1.2) contrast(1.2);
 }
 
 @keyframes pulse {
@@ -306,7 +307,7 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
     100% {
         transform: scale(1);
@@ -314,8 +315,7 @@
 }
 
 .animated-image {
-    animation: pulse 2s infinite;
-}
+    animation: pulse 3s infinite;
 }
 </style>
 </head>
