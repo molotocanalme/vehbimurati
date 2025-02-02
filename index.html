@@ -216,6 +216,15 @@
         margin: 5px 0;
     }
 }
+    .image-container img {
+    display: none;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 </style>
 </head>
       <style>
@@ -287,27 +296,6 @@
             font-family: 'Tahoma', sans-serif;
             font-size: 9px; /* 50% më e vogël */
         }
-          .image-container img {
-    display: none;
-    animation: fadeIn 2s forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-          document.addEventListener("DOMContentLoaded", function() {
-    let images = document.querySelectorAll('.image-container img');
-    let index = 0;
-
-    function showNextImage() {
-        images[index].style.display = 'block';
-        index = (index + 1) % images.length;
-        setTimeout(showNextImage, 3000); // Ndryshon imazhin çdo 3 sekonda
-    }
-
-    showNextImage();
-});
     </style>
     <style>
     #bio-section {
@@ -565,6 +553,19 @@ function showSection(sectionId) {
         <img src="painting3.jpg" alt="painting3.jpg" style="width: 100%;" class="fade">
         <p>Vaj në pëlhurë 1.5m X 2</p>
     </div>
+</div>
+    document.addEventListener("DOMContentLoaded", function() {
+    let images = document.querySelectorAll('.image-container img');
+    let index = 0;
+
+    function showNextImage() {
+        images[index].style.display = 'block';
+        index = (index + 1) % images.length;
+        setTimeout(showNextImage, 3000); // Ndryshon imazhin çdo 3 sekonda
+    }
+
+    showNextImage();
+});
 </div>
 
 </body>
