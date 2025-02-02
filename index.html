@@ -548,10 +548,14 @@ function showSection(sectionId) {
 <script>
     document.addEventListener('scroll', function() {
         var images = document.querySelectorAll('.image-container img');
+        var delay = 0;
         images.forEach(function(image) {
             var rect = image.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom > 0) {
-                image.classList.add('visible');
+                setTimeout(function() {
+                    image.classList.add('visible');
+                }, delay);
+                delay += 500; // Shton një vonesë prej 500ms për secilin imazh
             }
         });
     });
