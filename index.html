@@ -217,33 +217,6 @@
     }
 }
 </style>
-     <style>
-        .image-container {
-            position: relative;
-            overflow: hidden;
-            width: 50%;
-        }
-        .image-container img {
-            width: 100%;
-            transition: transform 0.5s ease;
-        }
-        .zoom-lens {
-            position: absolute;
-            border: 3px solid #fff;
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            overflow: hidden;
-            pointer-events: none;
-            transform: scale(1.5);
-            display: none;
-        }
-        .zoom-lens img {
-            position: absolute;
-            width: 200%;
-            height: 200%;
-        }
-    </style>
 </head>
       <style>
         /* Sfondi për seksionin e biografisë */
@@ -569,53 +542,15 @@ function showSection(sectionId) {
 
 <div id="certification" class="content certification">
     <h1 style="color: white; text-align: center;">GALLERY</h1>
-  <div class="image-container" onmousemove="zoom(event)" onmouseout="hideZoom()">
-            <img src="painting1.jpg" alt="painting1.jpg">
-            <div class="zoom-lens" id="zoomLens1">
-                <img src="painting1.jpg" alt="painting1.jpg">
-            </div>
-            <p>Vaj në pëlhurë 1.5m X 2</p>
-        </div>
-        <div class="image-container" onmousemove="zoom(event)" onmouseout="hideZoom()">
-            <img src="painting2.jpg" alt="painting2.jpg">
-            <div class="zoom-lens" id="zoomLens2">
-                <img src="painting2.jpg" alt="painting2.jpg">
-            </div>
-            <p>Vaj në pëlhurë 1.5m X 2</p>
-        </div>
-        <div class="image-container" onmousemove="zoom(event)" onmouseout="hideZoom()">
-            <img src="painting3.jpg" alt="painting3.jpg">
-            <div class="zoom-lens" id="zoomLens3">
-                <img src="painting3.jpg" alt="painting3.jpg">
-            </div>
-            <p>Vaj në pëlhurë 1.5m X 2</p>
-        </div>
+    <div class="image-container">
+        <img src="painting1.jpg" alt="painting1.jpg" style="width: 50%;">
+        <p>Vaj në pëlhurë 1.5m X 2</p>
+        <img src="painting2.jpg" alt="painting2.jpg" style="width: 50%;">
+        <p>Vaj në pëlhurë 1.5m X 2</p>
+        <img src="painting3.jpg" alt="painting3.jpg" style="width: 50%;">
+        <p>Vaj në pëlhurë 1.5m X 2</p>
     </div>
-
-    <script>
-        function zoom(event) {
-            const container = event.currentTarget;
-            const lens = container.querySelector('.zoom-lens');
-            const img = container.querySelector('img');
-            const lensImg = lens.querySelector('img');
-
-            const rect = container.getBoundingClientRect();
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
-
-            lens.style.left = `${x - lens.offsetWidth / 2}px`;
-            lens.style.top = `${y - lens.offsetHeight / 2}px`;
-            lens.style.display = 'block';
-
-            lensImg.style.left = `-${x * 2 - lens.offsetWidth / 2}px`;
-            lensImg.style.top = `-${y * 2 - lens.offsetHeight / 2}px`;
-        }
-
-        function hideZoom() {
-            const lenses = document.querySelectorAll('.zoom-lens');
-            lenses.forEach(lens => lens.style.display = 'none');
-        }
-    </script>
+</div>
 
 </body>
 </html>
@@ -744,11 +679,11 @@ function showSection(sectionId) {
 <div id="certification" class="content certification">
     <h1 style="color: white; text-align: center;">CERTIFIKIMI</h1>
     <div class="image-container">
-        <img src="painting1.jpg" alt="painting1.jpg" style="width: 50%;">
+        <img src="painting1.jpg" alt="painting1.jpg" style="width:40%;">
         <p>Vaj në pëlhurë 1.5m X 2</p>
-        <img src="painting2.jpg" alt="painting2.jpg" style="width: 50%;">
+        <img src="painting2.jpg" alt="painting2.jpg" style="width: 40%;">
         <p>Vaj në pëlhurë 1.5m X 2</p>
-        <img src="painting3.jpg" alt="painting3.jpg" style="width: 50%;">
+        <img src="painting3.jpg" alt="painting3.jpg" style="width: 40%;">
         <p>Vaj në pëlhurë 1.5m X 2</p>
     </div>
 
