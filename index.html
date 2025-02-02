@@ -431,35 +431,35 @@ function changeLanguage(lang) {
     if (lang === 'sq') {
         document.getElementById('video-albanian').style.display = 'block';
         document.getElementById('video-french').style.display = 'none';
-    } else if (lang === 'en') {
+    } else if (lang === 'fr') {
         document.getElementById('video-albanian').style.display = 'none';
         document.getElementById('video-french').style.display = 'block';
     }
-    if (lang === 'en') {
-        document.getElementById('translator-title').innerText = 'CERTIFIED TRANSLATOR';
-        document.getElementById('welcome-link').innerText = 'WELCOME';
+    if (lang === 'fr') {
+        document.getElementById('translator-title').innerText = 'TRADUCTEUR ASSERMENTÉ';
+        document.getElementById('welcome-link').innerText = 'BIENVENUE';
         document.getElementById('services-button').innerText = 'SERVICES';
-        document.getElementById('video-albanian').innerText = 'Video clip in Albanian';
-        document.getElementById('video-french').innerText = 'Video clip';
+        document.getElementById('video-albanian').innerText = 'Clip vidéo en albanais';
+        document.getElementById('video-french').innerText = 'Clip vidéo';
         document.getElementById('certification-link').innerText = 'CERTIFICATION';
-        document.getElementById('contact-link').innerText = 'CONTACT';
-        document.getElementById('translator-link').innerText = 'Need a reliable certified translator?';
+        document.getElementById('contact-link').innerText = 'CONTACTEZ';
+        document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
         
         // Update the services section
         document.querySelector('#services h1').innerText = '';
-        document.querySelector('#services p').innerText = 'Trust our professionalism for accurate and reliable translations in all fields.';
+        document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
         
         // Remove background from services section
         document.getElementById('services').style.background = 'none';
         
         // Update each service
         const services = [
-            { color: 'none', title: 'Legal Translations', description: 'Translation of legal documents such as contracts, court decisions, and other official documents.' },
-            { color: 'none', title: 'Medical Translations', description: 'Translation of medical documents, including medical reports, lab test results, and patient educational materials.' },
-            { color: 'none', title: 'Technical Translations', description: 'Translation of technical manuals, engineering documents, and other technical materials.' },
-            { color: 'none', title: 'Financial Translations', description: 'Translation of financial reports, balance sheets, and other financial documents.' },
-            { color: 'none', title: 'Marketing Translations', description: 'Translation of marketing materials, including brochures, advertising campaigns, and social media content.' },
-            { color: 'none', title: 'Food Label Translations', description: 'Translation of food labels and packaging content.' }
+            { color: 'none', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
+            { color: 'none', title: 'Traductions Médicales', description: 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.' },
+            { color: 'none', title: 'Traductions Techniques', description: 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.' },
+            { color: 'none', title: 'Traductions Financières', description: 'Traduction de rapports financiers, bilans et autres documents financiers.' },
+            { color: 'none', title: 'Traductions Marketing', description: 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.' },
+            { color: 'none', title: 'Traductions d\'Étiquettes Alimentaires', description: 'Traduction des étiquettes alimentaires et du contenu des emballages.' }
         ];
         
         services.forEach((service, index) => {
@@ -468,10 +468,9 @@ function changeLanguage(lang) {
             serviceElement.querySelector('p').innerText = service.description;
             serviceElement.querySelector('div').style.backgroundColor = service.color;
         });
-        
-        // Update the bio section
-        document.querySelector('#bio-section h2 span').innerText = 'A few words...';
-        document.querySelector('#bio-section p').innerText = 'Arianit Murati is a judicial translator and French language teacher with extensive academic and professional experience. He took his first steps in the French language at the Catholic University of the West in Angers. He then studied French language and literature at the University of Pristina. His passion for languages led him to the University of Paris 8, where he continued his studies in Language Sciences, specializing in the Didactics of Foreign Languages. He also studied at the University of Franche-Comté, at the Center for Distance Learning, in the direction of Language and Educational Policies, Digital Environments (E-learning). Currently, he is a French teacher at the "Ulpiana" high school in Lipjan, where he strives to inspire and educate young generations in the French language and culture. Additionally, he works as a judicial translator, providing accurate and reliable translation services to his clients. With a deep commitment to languages and a rich experience in teaching and translation, Arianit is dedicated to providing high-quality services and helping to build bridges of intercultural communication.';
+           // Update the bio section
+        document.querySelector('#bio-section h2 span').innerText = 'Quelques mots...';
+        document.querySelector('#bio-section p').innerText = 'Arianit Murati est traducteur judiciaire et professeur de langue française, possédant une vaste expérience académique et professionnelle. Il fit ses premiers pas dans la langue française à l\'Université Catholique de l\'Ouest à Angers. Il étudia ensuite la langue et la littérature françaises à l\'Université de Pristina. Sa passion pour les langues le conduisit à l\'Université Paris 8, où il poursuivit ses études en Sciences du Langage, avec une spécialisation en Didactique des langues étrangères. Également, il étudia à l\'Université de Franche-Comté, au Centre de Télé-Enseignement, dans la direction des Politiques linguistiques et éducatives, des Environnements numériques (E-learning). Actuellement, il est professeur de français au lycée « Ulpiana » de Lipjan, où il essaie d\'inspirer et d\'éduquer les jeunes générations à la langue et à la culture française. De plus, il travaille comme traducteur judiciaire, fournissant des services de traduction précis et fiables à ses clients. Fort d’un profond engagement envers les langues et d’une riche expérience dans l’enseignement et la traduction, Arianit s’engage à fournir des services de haute qualité et à contribuer à construire des ponts de communication interculturelle.';
     } else if (lang === 'sq') {
         // Existing Albanian content
         document.getElementById('translator-title').innerText = 'PËRKTHYES GJYQËSOR';
@@ -505,10 +504,9 @@ function changeLanguage(lang) {
             serviceElement.querySelector('p').innerText = service.description;
             serviceElement.querySelector('div').style.backgroundColor = service.color;
         });
-        
-        // Update the bio section
-        document.querySelector('#bio-section h2 span').innerText = 'Pak fjalë...';
-        document.querySelector('#bio-section p').innerText = 'Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.';
+    // Update the bio section
+document.querySelector('#bio-section h2 span').innerText = 'Pak fjalë...';
+document.querySelector('#bio-section p').innerText = 'Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.';
     }
 }
 
@@ -518,7 +516,9 @@ function changeLanguage(lang) {
 function showSection(sectionId) {
     document.querySelectorAll('.content').forEach(section => {
         section.style.display = 'none';
-    }); // Hide bio section
+    });
+    document.getElementById(sectionId).style.display = 'block';
+    document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
 
