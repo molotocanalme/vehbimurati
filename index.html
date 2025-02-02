@@ -292,17 +292,15 @@
     #bio-section {
         text-align: right;
     }
-      .animated-image {
-    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
-    position: relative;
-    z-index: 1;
+    .animated-image {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.animated-image:hover {
-    transform: scale(1.2) rotate(10deg);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
-    filter: brightness(1.2) contrast(1.2);
-    z-index: 2;
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @keyframes fadeIn {
@@ -313,31 +311,21 @@
         opacity: 1;
     }
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".animated-image");
+    let index = 0;
 
-.animated-image {
-    animation: fadeIn 1s ease-in-out;
-}
+    function showNextImage() {
+        if (index > 0) {
+            images[index - 1].style.opacity = 0;
+        }
+        images[index].style.opacity = 1;
+        index = (index + 1) % images.length;
+        setTimeout(showNextImage, 3000); // Ndryshoni kohën sipas dëshirës
+    }
 
-.image-container {
-    perspective: 1000px;
-}
-
-.animated-image {
-    transform-style: preserve-3d;
-}
-
-.animated-image:hover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.3);
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    z-index: -1;
-}
+    showNextImage();
+});
 </style>
 </head>
 <body>
