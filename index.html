@@ -292,7 +292,25 @@
     #bio-section {
         text-align: right;
     }
-</style>
+<style>
+        .image-container img {
+            width: 50%;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .image-container img.fullscreen {
+            width: 100%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .image-item {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(0, 0, 0, 0.4);">
@@ -540,17 +558,33 @@ function showSection(sectionId) {
 }
 </script>
 
-<div id="certification" class="content certification">
-    <h1 style="color: white; text-align: center;">GALLERY</h1>
-    <div class="image-container">
-       <img src="painting1.jpg" alt="painting1.jpg" style="width: 50%;">
-        <p>Vaj në pëlhurë 1.5m X 2</p>
-        <img src="painting2.jpg" alt="painting2.jpg" style="width: 50%;">
-        <p>Vaj në pëlhurë 1.5m X 2</p>
-        <img src="painting3.jpg" alt="painting3.jpg" style="width: 50%;">
-        <p>Vaj në pëlhurë 1.5m X 2</p>
+    <div id="certification" class="content certification">
+        <h1 style="color: white; text-align: center;">GALLERY</h1>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="painting1.jpg" alt="painting1.jpg" onclick="toggleFullscreen(this)">
+                <p>Vaj në pëlhurë 1.5m X 2</p>
+            </div>
+            <div class="image-item">
+                <img src="painting2.jpg" alt="painting2.jpg" onclick="toggleFullscreen(this)">
+                <p>Vaj në pëlhurë 1.5m X 2</p>
+            </div>
+            <div class="image-item">
+                <img src="painting3.jpg" alt="painting3.jpg" onclick="toggleFullscreen(this)">
+                <p>Vaj në pëlhurë 1.5m X 2</p>
+            </div>
+        </div>
     </div>
-</div>
+
+    <script>
+        function toggleFullscreen(img) {
+            if (img.classList.contains('fullscreen')) {
+                img.classList.remove('fullscreen');
+            } else {
+                img.classList.add('fullscreen');
+            }
+        }
+    </script>
 
 </body>
 </html>
