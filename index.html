@@ -292,9 +292,10 @@
     #bio-section {
         text-align: right;
     }
-    .animated-image {
+   .animated-image {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transform: scale(0.5);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .image-container {
@@ -303,12 +304,14 @@
     align-items: center;
 }
 
-@keyframes fadeIn {
+@keyframes extend {
     0% {
         opacity: 0;
+        transform: scale(0.5);
     }
     100% {
         opacity: 1;
+        transform: scale(1);
     }
 }
 document.addEventListener("DOMContentLoaded", function() {
@@ -318,8 +321,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function showNextImage() {
         if (index > 0) {
             images[index - 1].style.opacity = 0;
+            images[index - 1].style.transform = "scale(0.5)";
         }
         images[index].style.opacity = 1;
+        images[index].style.transform = "scale(1)";
         index = (index + 1) % images.length;
         setTimeout(showNextImage, 3000); // Ndryshoni kohën sipas dëshirës
     }
