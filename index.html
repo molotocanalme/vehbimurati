@@ -427,78 +427,7 @@
 </script>
     </div>
    <script>
-function changeLanguage(lang) {
-    if (lang === 'sq') {
-        document.getElementById('video-albanian').style.display = 'block';
-        document.getElementById('video-english').style.display = 'none';
-    } else if (lang === 'en') {
-        document.getElementById('video-albanian').style.display = 'none';
-        document.getElementById('video-english').style.display = 'block';
-    }
-    if (lang === 'en') {
-        // Additional code for English language settings
-    }
-        document.getElementById('translator-title').innerText = 'PAINTER';
-        document.getElementById('welcome-link').innerText = 'WELCOME';
-        document.getElementById('services-button').innerText = 'SERVICES';
-        document.getElementById('video-albanian').innerText = 'Clip video';
-        document.getElementById('video-french').innerText = 'Clip vidéo';
-        document.getElementById('certification-link').innerText = 'GALLERY';
-        document.getElementById('contact-link').innerText = 'CONTACT';
-        document.getElementById('translator-link').innerText = 'Do you want to decorate your interior?';
-        
-        // Update the services section
-        document.querySelector('#services h1').innerText = '';
-        document.querySelector('#services p').innerText = ''Trust our professionalism for....';.';
-        
-        // Remove background from services section
-        document.getElementById('services').style.background = 'none';
-        
-    // Update each service
-const services = [
-{ color: 'none', title: 'Legal Translations', description: 'Translation of legal documents such as contracts, court decisions, and other official documents.' },
-{ color: 'none', title: 'Medical Translations', description: 'Translation of medical documents, including medical reports, laboratory test results, and patient education materials.' },
-{ color: 'none', title: 'Technical Translations', description: 'Translation of technical manuals, engineering documents, and other technical materials.' },
-{ color: 'none', title: 'Financial Translations', description: 'Translation of financial reports, balance sheets, and other financial documents.' },
-{ color: 'none', title: 'Marketing Translations', description: 'Translation of marketing materials, including brochures, advertising campaigns and social media content.' },
-{ color: 'none', title: 'Food Label Translations', description: 'Translation of food labels and packaging contents.' }
-        ];
-        
-        services.forEach((service, index) => {
-            const serviceElement = document.querySelectorAll('.col-lg-6')[index];
-            serviceElement.querySelector('h3').innerText = service.title;
-            serviceElement.querySelector('p').innerText = service.description;
-            serviceElement.querySelector('div').style.backgroundColor = service.color;
-        });
-           // Update the bio section
-        document.querySelector('#bio-section h2 span').innerText = 'Quelques mots...';
-        document.querySelector('#bio-section p').innerText = 'Vehbi Murati est.';
-    } else if (lang === 'sq') {
-        // Existing Albanian content
-        document.getElementById('translator-title').innerText = 'PIKTOR';
-        document.getElementById('welcome-link').innerText = 'MIRË SE VINI';
-        document.getElementById('services-button').innerText = 'SHËRBIME';
-        document.getElementById('video-albanian').innerText = 'Filmim';
-        document.getElementById('video-french').innerText = 'Filmim në anglisht';
-        document.getElementById('certification-link').innerText = 'GALERI';
-        document.getElementById('contact-link').innerText = 'KONTAKTONI';
-        document.getElementById('translator-link').innerText = 'Dëshironi zbukurimin e interierit tuaj?';
-        
-        // Remove background from services section
-        document.getElementById('services').style.background = 'none';
-        
-        // Existing Albanian services content
-        document.querySelector('#services h1').innerText = '';
-        document.querySelector('#services p').innerText = 'Besoni profesionalizmit tonë për.';
-        
-        const services = [
-            { color: 'none', title: 'Përkthime Ligjore', description: 'Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.' },
-            { color: 'none', title: 'Përkthime Mjekësore', description: 'Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.' },
-            { color: 'none', title: 'Përkthime Teknike', description: 'Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.' },
-            { color: 'none', title: 'Përkthime Financiare', description: 'Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.' },
-            { color: 'none', title: 'Përkthime të Marketingut', description: 'Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.' },
-            { color: 'none', title: 'Përkthime të Etiketave Ushqimore', description: 'Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.' }
-        ];
+
         
         services.forEach((service, index) => {
             const serviceElement = document.querySelectorAll('.col-lg-6')[index];
