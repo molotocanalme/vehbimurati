@@ -531,17 +531,29 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
-</script>
-    <style>
+<style>
     .image-container img {
         width: 50%;
-        transition: transform 0.5s ease-in-out; /* Shton animacion për transformim */
+        opacity: 0; /* Fillimisht imazhet janë të padukshme */
+        transition: opacity 1s ease-in-out; /* Shton animacion për ndryshimin e opacitetit */
     }
 
-    .image-container img:hover {
-        transform: scale(1.1); /* Zmadhohet kur kaloni miun mbi imazh */
+    .image-container img.visible {
+        opacity: 1; /* Bëhet i dukshëm kur klasa 'visible' shtohet */
     }
 </style>
+
+<script>
+    document.addEventListener('scroll', function() {
+        var images = document.querySelectorAll('.image-container img');
+        images.forEach(function(image) {
+            var rect = image.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                image.classList.add('visible');
+            }
+        });
+    });
+</script>
 
 <div id="certification" class="content certification">
     <h1 style="color: white; text-align: center;">GALLERY</h1>
