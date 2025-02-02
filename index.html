@@ -532,6 +532,16 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
+    <style>
+    .image-container img {
+        width: 50%;
+        transition: transform 0.5s ease-in-out; /* Shton animacion për transformim */
+    }
+
+    .image-container img:hover {
+        transform: scale(1.1); /* Zmadhohet kur kaloni miun mbi imazh */
+    }
+</style>
 
 <div id="certification" class="content certification">
     <h1 style="color: white; text-align: center;">GALLERY</h1>
