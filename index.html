@@ -298,9 +298,9 @@
    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(0, 0, 0, 0.4);">
     <div class="left" style="display: flex; align-items: center;">
         <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">
-            <span class="tahoma" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
+            <span class="tahoma" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Vehbi Murati</span>
         </span>
-        <span class="tahoma-small" style="color: #fff; margin-left: 10px;" id="translator-title">PËRKTHYES GJYQËSOR</span>
+        <span class="tahoma-small" style="color: #fff; margin-left: 10px;" id="translator-title">PIKTOR</span>
         <div class="center" style="display: flex; align-items: center; margin-left: 10px;">
             <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 5px;"></a>
             <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 5px;"></a>
@@ -314,10 +314,10 @@
             </button>
             <div class="dropdown-content">
                 <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Filmim</a>
-                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none; background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Clip vidéo</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none; background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Clip</a>
             </div>
         </div>
-        <a href="#" onclick="showSection('certification')" class="highlight-transparent" id="certification-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">CERTIFIKIMI</a>
+        <a href="#" onclick="showSection('galeri')" class="highlight-transparent" id="certification-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">GALERI</a>
    <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">KONTAKTONI</a>
     </div>
 </div>
@@ -338,7 +338,7 @@
     <h2></h2>
     <h2 style="float: left;"><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
     <div class="bio-text">
-        <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
+        <p>Vehbi Murati është ....</p>
         <img src="sign1.png" alt="" class="signature">
     </div>
 </div>
@@ -402,7 +402,7 @@
     <!-- Faqja kryesore -->
     <div id="welcome" class="content welcome">
         <p><span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span></p>
-        <p><a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
+        <p><a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link">Dëshironi zbukurimin e interierti tuaj?</a></p>
     </div>
             </a> 
         </p>
@@ -430,36 +430,38 @@
 function changeLanguage(lang) {
     if (lang === 'sq') {
         document.getElementById('video-albanian').style.display = 'block';
-        document.getElementById('video-french').style.display = 'none';
-    } else if (lang === 'fr') {
+        document.getElementById('video-english').style.display = 'none';
+    } else if (lang === 'en') {
         document.getElementById('video-albanian').style.display = 'none';
-        document.getElementById('video-french').style.display = 'block';
+        document.getElementById('video-english').style.display = 'block';
     }
-    if (lang === 'fr') {
-        document.getElementById('translator-title').innerText = 'TRADUCTEUR ASSERMENTÉ';
-        document.getElementById('welcome-link').innerText = 'BIENVENUE';
+    if (lang === 'en') {
+        // Additional code for English language settings
+    }
+        document.getElementById('translator-title').innerText = 'PAINTER';
+        document.getElementById('welcome-link').innerText = 'WELCOME';
         document.getElementById('services-button').innerText = 'SERVICES';
-        document.getElementById('video-albanian').innerText = 'Clip vidéo en albanais';
+        document.getElementById('video-albanian').innerText = 'Clip video';
         document.getElementById('video-french').innerText = 'Clip vidéo';
-        document.getElementById('certification-link').innerText = 'CERTIFICATION';
-        document.getElementById('contact-link').innerText = 'CONTACTEZ';
-        document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
+        document.getElementById('certification-link').innerText = 'GALLERY';
+        document.getElementById('contact-link').innerText = 'CONTACT';
+        document.getElementById('translator-link').innerText = 'Do you want to decorate your interior?';
         
         // Update the services section
         document.querySelector('#services h1').innerText = '';
-        document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
+        document.querySelector('#services p').innerText = ''Trust our professionalism for....';.';
         
         // Remove background from services section
         document.getElementById('services').style.background = 'none';
         
-        // Update each service
-        const services = [
-            { color: 'none', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
-            { color: 'none', title: 'Traductions Médicales', description: 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.' },
-            { color: 'none', title: 'Traductions Techniques', description: 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.' },
-            { color: 'none', title: 'Traductions Financières', description: 'Traduction de rapports financiers, bilans et autres documents financiers.' },
-            { color: 'none', title: 'Traductions Marketing', description: 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.' },
-            { color: 'none', title: 'Traductions d\'Étiquettes Alimentaires', description: 'Traduction des étiquettes alimentaires et du contenu des emballages.' }
+    // Update each service
+const services = [
+{ color: 'none', title: 'Legal Translations', description: 'Translation of legal documents such as contracts, court decisions, and other official documents.' },
+{ color: 'none', title: 'Medical Translations', description: 'Translation of medical documents, including medical reports, laboratory test results, and patient education materials.' },
+{ color: 'none', title: 'Technical Translations', description: 'Translation of technical manuals, engineering documents, and other technical materials.' },
+{ color: 'none', title: 'Financial Translations', description: 'Translation of financial reports, balance sheets, and other financial documents.' },
+{ color: 'none', title: 'Marketing Translations', description: 'Translation of marketing materials, including brochures, advertising campaigns and social media content.' },
+{ color: 'none', title: 'Food Label Translations', description: 'Translation of food labels and packaging contents.' }
         ];
         
         services.forEach((service, index) => {
@@ -470,24 +472,24 @@ function changeLanguage(lang) {
         });
            // Update the bio section
         document.querySelector('#bio-section h2 span').innerText = 'Quelques mots...';
-        document.querySelector('#bio-section p').innerText = 'Arianit Murati est traducteur judiciaire et professeur de langue française, possédant une vaste expérience académique et professionnelle. Il fit ses premiers pas dans la langue française à l\'Université Catholique de l\'Ouest à Angers. Il étudia ensuite la langue et la littérature françaises à l\'Université de Pristina. Sa passion pour les langues le conduisit à l\'Université Paris 8, où il poursuivit ses études en Sciences du Langage, avec une spécialisation en Didactique des langues étrangères. Également, il étudia à l\'Université de Franche-Comté, au Centre de Télé-Enseignement, dans la direction des Politiques linguistiques et éducatives, des Environnements numériques (E-learning). Actuellement, il est professeur de français au lycée « Ulpiana » de Lipjan, où il essaie d\'inspirer et d\'éduquer les jeunes générations à la langue et à la culture française. De plus, il travaille comme traducteur judiciaire, fournissant des services de traduction précis et fiables à ses clients. Fort d’un profond engagement envers les langues et d’une riche expérience dans l’enseignement et la traduction, Arianit s’engage à fournir des services de haute qualité et à contribuer à construire des ponts de communication interculturelle.';
+        document.querySelector('#bio-section p').innerText = 'Vehbi Murati est.';
     } else if (lang === 'sq') {
         // Existing Albanian content
-        document.getElementById('translator-title').innerText = 'PËRKTHYES GJYQËSOR';
+        document.getElementById('translator-title').innerText = 'PIKTOR';
         document.getElementById('welcome-link').innerText = 'MIRË SE VINI';
         document.getElementById('services-button').innerText = 'SHËRBIME';
         document.getElementById('video-albanian').innerText = 'Filmim';
-        document.getElementById('video-french').innerText = 'Filmim në frëngjisht';
-        document.getElementById('certification-link').innerText = 'CERTIFIKIMI';
+        document.getElementById('video-french').innerText = 'Filmim në anglisht';
+        document.getElementById('certification-link').innerText = 'GALERI';
         document.getElementById('contact-link').innerText = 'KONTAKTONI';
-        document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
+        document.getElementById('translator-link').innerText = 'Dëshironi zbukurimin e interierit tuaj?';
         
         // Remove background from services section
         document.getElementById('services').style.background = 'none';
         
         // Existing Albanian services content
         document.querySelector('#services h1').innerText = '';
-        document.querySelector('#services p').innerText = 'Besoni profesionalizmit tonë për përkthime të sakta dhe të besueshme në çdo fushë.';
+        document.querySelector('#services p').innerText = 'Besoni profesionalizmit tonë për.';
         
         const services = [
             { color: 'none', title: 'Përkthime Ligjore', description: 'Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.' },
@@ -506,7 +508,7 @@ function changeLanguage(lang) {
         });
     // Update the bio section
 document.querySelector('#bio-section h2 span').innerText = 'Pak fjalë...';
-document.querySelector('#bio-section p').innerText = 'Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.';
+document.querySelector('#bio-section p').innerText = 'Vehbi Murati është.';
     }
 }
 
@@ -631,7 +633,7 @@ function showSection(sectionId) {
 </script>
 
 <div id="certification" class="content certification">
-    <h1 style="color: white; text-align: center;">CERTIFIKIMI</h1>
+    <h1 style="color: white; text-align: center;">GALERI</h1>
     <div class="image-container">
         <img src="image1.jpg" alt="Image 1">
         <img src="image2.jpg" alt="Image 2">
