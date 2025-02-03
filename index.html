@@ -317,10 +317,13 @@
             <button class="dropbtn highlight-orange" id="gallery-button" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">GALLERY <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-            
+                <a href="#" onclick="showSection('gallery1')" class="highlight" id="gallery1-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Landscape</a>
                 <a href="#" onclick="showSection('gallery2')" class="highlight" id="gallery2-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Portret</a>
-                <a href="#" onclick="showSection('gallery3')" class="highlight" id="gallery3-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Others</a>
-              
+                <a href="#" onclick="showSection('gallery3')" class="highlight" id="gallery3-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Impressionism</a>
+                <a href="#" onclick="showSection('gallery4')" class="highlight" id="gallery4-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Peaceful nature</a>
+                <a href="#" onclick="showSection('gallery5')" class="highlight" id="gallery5-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Surrealist</a>
+                <a href="#" onclick="showSection('gallery6')" class="highlight" id="gallery6-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Abstract</a>
+                <a href="#" onclick="showSection('gallery7')" class="highlight" id="gallery7-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Historical</a>
             </div>
         </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">CONTACT</a>
@@ -542,18 +545,9 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-<div id="gallery2" class="content gallery">
-    <h1 style="color: white; text-align: center;">Portret</h1>
-    <div class="image-container">
-        <img src="painting1.jpg" alt="painting1.jpg" style="width: 75%;">
-        <p>Description of image 1</p>
-        <img src="painting2.jpg" alt="painting2.jpg" style="width: 75%;">
-        <p>Description of image 2</p>
-        <img src="painting3.jpg" alt="painting3.jpg" style="width: 75%;">
-        <p>Description of image 3</p>
-</div>
-<div id="gallery4" class="content gallery">
-    <h1 style="color: white; text-align: center;">Others</h1>
+
+<div id="gallery1" class="content gallery">
+    <h1 style="color: white; text-align: center;">Landscape</h1>
     <div class="image-container">
         <img src="image1.jpg" alt="image1.jpg" style="width: 75%;">
         <p>Description of image 1</p>
@@ -563,7 +557,72 @@ function showSection(sectionId) {
         <p>Description of image 3</p>
     </div>
 </div>
-
+<div id="gallery2" class="content gallery">
+    <h1 style="color: white; text-align: center;">Portret</h1>
+    <div class="image-container">
+        <img src="painting1.jpg" alt="painting1.jpg" style="width: 75%;">
+        <p>Description of image 1</p>
+        <img src="painting2.jpg" alt="painting2.jpg" style="width: 75%;">
+        <p>Description of image 2</p>
+        <img src="painting3.jpg" alt="painting3.jpg" style="width: 75%;">
+        <p>Description of image 3</p>
+    </div>
+</div>
+<div id="gallery3" class="content gallery">
+    <h1 style="color: white; text-align: center;">Impressionism</h1>
+    <div class="image-container">
+        <img src="image1.jpg" alt="image1.jpg" style="width: 75%;">
+        <p>Description of image 1</p>
+        <img src="image2.jpg" alt="image2.jpg" style="width: 75%;">
+        <p>Description of image 2</p>
+        <img src="image3.jpg" alt="image3.jpg" style="width: 75%;">
+        <p>Description of image 3</p>
+    </div>
+</div>
+<div id="gallery4" class="content gallery">
+    <h1 style="color: white; text-align: center;">Peaceful nature</h1>
+    <div class="image-container">
+        <img src="image1.jpg" alt="image1.jpg" style="width: 75%;">
+        <p>Description of image 1</p>
+        <img src="image2.jpg" alt="image2.jpg" style="width: 75%;">
+        <p>Description of image 2</p>
+        <img src="image3.jpg" alt="image3.jpg" style="width: 75%;">
+        <p>Description of image 3</p>
+    </div>
+</div>
+    <div id="gallery5" class="content gallery">
+    <h1 style="color: white; text-align: center;">Surrealist</h1>
+    <div class="image-container">
+        <img src="image1.jpg" alt="image1.jpg" style="width: 75%;">
+        <p>Description of image 1</p>
+        <img src="image2.jpg" alt="image2.jpg" style="width: 75%;">
+        <p>Description of image 2</p>
+        <img src="image3.jpg" alt="image3.jpg" style="width: 75%;">
+        <p>Description of image 3</p>
+        </div>
+</div>
+    <div id="gallery6" class="content gallery">
+    <h1 style="color: white; text-align: center;">Abstract</h1>
+    <div class="image-container">
+        <img src="image1.jpg" alt="image1.jpg" style="width: 75%;">
+        <p>Description of image 1</p>
+        <img src="image2.jpg" alt="image2.jpg" style="width: 75%;">
+        <p>Description of image 2</p>
+        <img src="image3.jpg" alt="image3.jpg" style="width: 75%;">
+        <p>Description of image 3</p>
+ </div>
+</div>
+     <div id="gallery7" class="content gallery">
+    <h1 style="color: white; text-align: center;">Historical</h1>
+    <div class="image-container">
+        <img src="image1.jpg" alt="image1.jpg" style="width: 75%;">
+        <p>Description of image 1</p>
+        <img src="image2.jpg" alt="image2.jpg" style="width: 75%;">
+        <p>Description of image 2</p>
+        <img src="image3.jpg" alt="image3.jpg" style="width: 75%;">
+        <p>Description of image 3</p>
+     </div>
+</div>
 </body>
 </html>
 
