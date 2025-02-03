@@ -217,6 +217,47 @@
     }
 }
 </style>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .gallery {
+            display: none;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.getElementsByClassName('gallery');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </head>
       <style>
         /* Sfondi për seksionin e biografisë */
@@ -313,18 +354,36 @@
                 <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">VIDEO</a>
             </div>
         </div>
-       <div class="dropdown">
-    <button class="dropbtn highlight-orange" id="gallery-button" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">GALLERY <i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-content">
-        <a href="#" onclick="showSection('gallery1')" class="highlight" id="gallery1-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));" target="_blank">GALLERY 1</a>
-        <a href="#" onclick="showSection('gallery2')" class="highlight" id="gallery2-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));" target="_blank">GALLERY 2</a>
-        <a href="#" onclick="showSection('gallery3')" class="highlight" id="gallery3-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));" target="_blank">GALLERY 3</a>
-        <a href="#" onclick="showSection('gallery4')" class="highlight" id="gallery4-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));" target="_blank">GALLERY 4</a>
-        <a href="#" onclick="showSection('gallery5')" class="highlight" id="gallery5-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));" target="_blank">GALLERY 5</a>
-        <a href="#" onclick="showSection('gallery6')" class="highlight" id="gallery6-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));" target="_blank">GALLERY 6</a>
-        <a href="#" onclick="showSection('gallery7')" class="highlight" id="gallery7-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));" target="_blank">GALLERY 7</a>
+        <div class="dropdown">
+        <button class="dropbtn highlight-orange" id="gallery-button" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">GALLERY <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSection('gallery1')" class="highlight" id="gallery1-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">GALLERY 1</a>
+            <a href="#" onclick="showSection('gallery2')" class="highlight" id="gallery2-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">GALLERY 2</a>
+            <a href="#" onclick="showSection('gallery3')" class="highlight" id="gallery3-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">GALLERY 3</a>
+            <!-- Add more links as needed -->
+        </div>
     </div>
-</div>
+
+    <div id="gallery1" class="gallery">
+        <h2>Gallery 1</h2>
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <!-- Add up to 20 images -->
+    </div>
+    <div id="gallery2" class="gallery">
+        <h2>Gallery 2</h2>
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <!-- Add up to 20 images -->
+    </div>
+    <div id="gallery3" class="gallery">
+        <h2>Gallery 3</h2>
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <!-- Add up to 20 images -->
+    </div>
+    <!-- Add more galleries as needed -->
+</body>
    <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">CONTACT</a>
     </div>
 </div>
