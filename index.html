@@ -314,6 +314,14 @@
             </div>
         </div>
         <a href="#" onclick="showSection('certification')" class="highlight-transparent" id="certification-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">GALLERY</a>
+         <a href="#" onclick="showSection('section1')" class="highlight-transparent" id="section1-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Seksioni 1</a>
+    <a href="#" onclick="showSection('section2')" class="highlight-transparent" id="section2-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Seksioni 2</a>
+    <a href="#" onclick="showSection('section3')" class="highlight-transparent" id="section3-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Seksioni 3</a>
+    <a href="#" onclick="showSection('section4')" class="highlight-transparent" id="section4-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Seksioni 4</a>
+    <a href="#" onclick="showSection('section5')" class="highlight-transparent" id="section5-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Seksioni 5</a>
+    <a href="#" onclick="showSection('section6')" class="highlight-transparent" id="section6-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Seksioni 6</a>
+    <a href="#" onclick="showSection('section7')" class="highlight-transparent" id="section7-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Seksioni 7</a>
+</div>
    <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">CONTACT</a>
     </div>
 </div>
@@ -537,13 +545,48 @@ function showSection(sectionId) {
 <div id="certification" class="content certification">
     <h1 style="color: white; text-align: center;">GALLERY</h1>
     <div class="image-container">
-        <img src="painting1.jpg" alt="painting1.jpg" style="width: 75%;">
-        <p>Vaj në pëlhurë 1.5m X 2</p>
-        <img src="painting2.jpg" alt="painting2.jpg" style="width: 75%;">
-        <p>Vaj në pëlhurë 1.5m X 2</p>
-        <img src="painting3.jpg" alt="painting3.jpg" style="width: 75%;">
-        <p>Vaj në pëlhurë 1.5m X 2</p>
-    </div>
+             <!-- Nën seksioni 1 -->
+        <div id="section1" class="gallery-section">
+            <h2>Seksioni 1</h2>
+            <img src="painting1.jpg" alt="painting1.jpg" class="animated-image" style="width: 50%;">
+            <p>Vaj në pëlhurë 1.5m X 2</p>
+        </div>
+        <!-- Nën seksioni 2 -->
+        <div id="section2" class="gallery-section">
+            <h2>Seksioni 2</h2>
+            <img src="painting2.jpg" alt="painting2.jpg" class="animated-image" style="width: 50%;">
+            <p>Vaj në pëlhurë 1.5m X 2</p>
+        </div>
+        <!-- Nën seksioni 3 -->
+        <div id="section3" class="gallery-section">
+            <h2>Seksioni 3</h2>
+            <img src="painting3.jpg" alt="painting3.jpg" class="animated-image" style="width: 50%;">
+            <p>Vaj në pëlhurë 1.5m X 2</p>
+        </div>
+        <!-- Nën seksioni 4 -->
+        <div id="section4" class="gallery-section">
+            <h2>Seksioni 4</h2>
+            <img src="painting4.jpg" alt="painting4.jpg" class="animated-image" style="width: 50%;">
+            <p>Vaj në pëlhurë 1.5m X 2</p>
+        </div>
+        <!-- Nën seksioni 5 -->
+        <div id="section5" class="gallery-section">
+            <h2>Seksioni 5</h2>
+            <img src="painting5.jpg" alt="painting5.jpg" class="animated-image" style="width: 50%;">
+            <p>Vaj në pëlhurë 1.5m X 2</p>
+        </div>
+        <!-- Nën seksioni 6 -->
+        <div id="section6" class="gallery-section">
+            <h2>Seksioni 6</h2>
+            <img src="painting6.jpg" alt="painting6.jpg" class="animated-image" style="width: 50%;">
+            <p>Vaj në pëlhurë 1.5m X 2</p>
+        </div>
+        <!-- Nën seksioni 7 -->
+        <div id="section7" class="gallery-section">
+            <h2>Seksioni 7</h2>
+            <img src="painting7.jpg" alt="painting7.jpg" class="animated-image" style="width: 50%;">
+            <p>Vaj në pëlhurë 1.5m X 2</p>
+        </div>
 </div>
 
 </body>
@@ -659,6 +702,18 @@ function showSection(sectionId) {
             document.getElementById(sectionId).style.display = 'block';
         }
     </script>
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.gallery-section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+}
+
+// Trego seksionin e parë si parazgjedhje
+document.addEventListener("DOMContentLoaded", function() {
+    showSection('section1');
+});
 
 <script>
 function showSection(sectionId) {
