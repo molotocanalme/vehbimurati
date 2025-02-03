@@ -534,21 +534,69 @@ function showSection(sectionId) {
 }
 </script>
 
-<div id="certification" class="content certification">
-    <h1 style="color: white; text-align: center;">GALLERY</h1>
-    
-    <div class="gallery-navigation">
-        <ul>
-            <li><a href="section1.html">Section 1</a></li>
-            <li><a href="section2.html">Section 2</a></li>
-            <li><a href="section3.html">Section 3</a></li>
-            <li><a href="section4.html">Section 4</a></li>
-            <li><a href="section5.html">Section 5</a></li>
-            <li><a href="section6.html">Section 6</a></li>
-            <li><a href="section7.html">Section 7</a></li>
-        </ul>
+  <div id="certification" class="content certification">
+        <h1 style="color: white; text-align: center;">GALLERY</h1>
+        
+        <div class="gallery-navigation">
+            <a href="section1.html">Section 1</a>
+            <a href="section2.html">Section 2</a>
+            <a href="section3.html">Section 3</a>
+            <a href="section4.html">Section 4</a>
+            <a href="section5.html">Section 5</a>
+            <a href="section6.html">Section 6</a>
+            <a href="section7.html">Section 7</a>
+        </div>
     </div>
-</div>
+
+    <div id="sections">
+        <div id="section1">
+            <h2>Section 1</h2>
+            <div class="image-container">
+                <!-- 20 image slots -->
+                " + "".join(["<img src="" alt="Image {}"><br>".format(i) for i in range(1, 21)]) + "
+            </div>
+        </div>
+        
+        <div id="section2">
+            <h2>Section 2</h2>
+            <div class="image-container">
+                " + "".join(["<img src="" alt="Image {}"><br>".format(i) for i in range(1, 21)]) + "
+            </div>
+        </div>
+        
+        <div id="section3">
+            <h2>Section 3</h2>
+            <div class="image-container">
+                " + "".join(["<img src="" alt="Image {}"><br>".format(i) for i in range(1, 21)]) + "
+            </div>
+        </div>
+        
+        <div id="section4">
+            <h2>Section 4</h2>
+            <div class="image-container">
+                " + "".join(["<img src="" alt="Image {}"><br>".format(i) for i in range(1, 21)]) + "
+            </div>
+        </div>
+        
+        <div id="section5">
+            <h2>Section 5</h2>
+            <div class="image-container">
+                " + "".join(["<img src="" alt="Image {}"><br>".format(i) for i in range(1, 21)]) + "
+            </div>
+        </div>
+        
+        <div id="section6">
+            <h2>Section 6</h2>
+            <div class="image-container">
+                " + "".join(["<img src="" alt="Image {}"><br>".format(i) for i in range(1, 21)]) + "
+            </div>
+        </div>
+        
+        <div id="section7">
+            <h2>Section 7</h2>
+            <div class="image-container">
+                " + "".join(["<img src="" alt="Image {}"><br>".format(i) for i in range(1, 21)]) + "
+            </div>
 
 </body>
 </html>
