@@ -217,6 +217,25 @@
     }
 }
 </style>
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            margin: 5px 0;
+        }
+        .highlight {
+            background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));
+        }
+        .gallery-section {
+            display: none;
+        }
+        .gallery-section img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+    </style>
 </head>
       <style>
         /* Sfondi për seksionin e biografisë */
@@ -328,7 +347,41 @@
         </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">CONTACT</a>
     </div>
-</div>
+      
+ <div id="gallery1" class="gallery-section">
+        <!-- Integroni 20 imazhe këtu -->
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <!-- Shtoni më shumë imazhe deri në 20 -->
+    </div>
+    <div id="gallery2" class="gallery-section">
+        <!-- Integroni 20 imazhe këtu -->
+    </div>
+    <div id="gallery3" class="gallery-section">
+        <!-- Integroni 20 imazhe këtu -->
+    </div>
+    <div id="gallery4" class="gallery-section">
+        <!-- Integroni 20 imazhe këtu -->
+    </div>
+    <div id="gallery5" class="gallery-section">
+        <!-- Integroni 20 imazhe këtu -->
+    </div>
+    <div id="gallery6" class="gallery-section">
+        <!-- Integroni 20 imazhe këtu -->
+    </div>
+    <div id="gallery7" class="gallery-section">
+        <!-- Integroni 20 imazhe këtu -->
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.getElementsByClassName('gallery-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
